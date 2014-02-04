@@ -12,16 +12,16 @@
  * @version 2.0.0
  */
 defined('BACKEND') or define('BACKEND',false);
-defined('LOCAL_DOMAIN') or define('LOCAL_DOMAIN','localhost');
+defined('LOCAL_DOMAIN') or define('LOCAL_DOMAIN','127.0.0.1');
 define('CURRENT_ACTIVE_DOMAIN', $_SERVER['HTTP_HOST']);
 defined('APP_DEPLOYED') or define('APP_DEPLOYED',!(CURRENT_ACTIVE_DOMAIN == LOCAL_DOMAIN));
 defined('DS') or define('DS',DIRECTORY_SEPARATOR);
 
 
 //Local Framework Path
-$yii=(!APP_DEPLOYED)?dirname(__FILE__).DS.'..'.DS .'yii'.DS .'framework'.DS .'yii.php':
+$yii=(!APP_DEPLOYED)?dirname(__FILE__).DS.'..'.DS.'frameworks'.DS .'yii'.DS .'framework'.DS .'yii.php':
 //Server framework Path
-dirname(__FILE__).DS.'..'.DS .'yii'.DS .'framework'.DS .'yii.php';
+dirname(__FILE__).DS.'..'.DS.'frameworks'.DS .'yii_1.1.14'.DS .'framework'.DS .'yii.php';
 
 
 $config=dirname(__FILE__).'/protected/config/main.php';
